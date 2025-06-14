@@ -1,3 +1,7 @@
 return {
-  "Shatur/neovim-ayu",
+  {
+    'arturgoms/moonbow.nvim',
+    opts = {},
+    lazy = false,
+  },
 }

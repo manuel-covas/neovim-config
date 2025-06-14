@@ -2,7 +2,7 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     lazy = true,
-    opts = {},
+    opts = function() return require("opts.nvim-tree") end,
     keys = require("keys.nvim-tree")
   },
   {
@@ -16,7 +16,7 @@ return {
     "folke/which-key.nvim",
     event = "VeryLazy",
     opts = {},
-    keys = require("keys.which-key")
+    keys = function() return require("keys.which-key") end,
   },
   {
     "nvim-telescope/telescope.nvim",
@@ -28,7 +28,7 @@ return {
   {
     "saghen/blink.cmp",
     version = "1.*",
-    opts = {},
+    opts = function() return require("opts.blink-cmp") end,
   },
   {
     "neovim/nvim-lspconfig",
@@ -62,6 +62,7 @@ return {
   },
   {
     'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    opts = function() return require("opts.lualine") end,
   },
 }
