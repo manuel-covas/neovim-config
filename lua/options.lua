@@ -10,3 +10,5 @@ o.tabstop = 2        -- num of space characters per tab
 o.shiftwidth = 2     -- spaces per indentation level
 o.termguicolors = true
 o.number = true
+
+vim.g.lazygit_floating_window_use_plenary = 1
