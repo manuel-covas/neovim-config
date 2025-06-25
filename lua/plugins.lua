@@ -1,5 +1,15 @@
 return {
   {
+    "zaldih/themery.nvim",
+    lazy = false,
+    config = function()
+      require("themery").setup({
+        themes = {"tokyonight-day", "tokyonight-night", "tokyonight-storm", "tokyonight-moon"}, -- Your list of installed colorschemes.
+	livePreview = true, -- Apply theme while picking. Default to true.
+      })
+    end
+  },
+  {
     "nvim-tree/nvim-tree.lua",
     lazy = true,
     opts = function() return require("opts.nvim-tree") end,

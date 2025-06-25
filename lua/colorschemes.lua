@@ -1,7 +1,8 @@
 return {
   {
-    'arturgoms/moonbow.nvim',
-    opts = {},
+    "folke/tokyonight.nvim",
     lazy = false,
+    priority = 1000,
+    opts = {},
   },
 }
