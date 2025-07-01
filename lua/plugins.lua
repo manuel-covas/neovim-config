@@ -1,5 +1,11 @@
 return {
   {
+    "numToStr/FTerm.nvim",
+    lazy = true,
+    config = function() require("config.fterm") end,
+    keys = require("keys.fterm"),
+  },
+  {
     "kdheepak/lazygit.nvim",
     lazy = true,
     cmd = {
