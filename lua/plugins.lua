@@ -1,5 +1,33 @@
 return {
   {
+    "folke/trouble.nvim",
+    opts = {}, -- for default options, refer to the configuration section for custom setup.
+    cmd = "Trouble",
+    keys = require("keys.trouble")
+  },
+  {
+    "theHamsta/nvim-dap-virtual-text",
+    config = function() require("config.nvim-dap-virtual-text") end,
+  },
+  {
+    "mfussenegger/nvim-dap-python",
+    config = function() require("config.nvim-dap-python") end,
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio"
+    },
+    config = function() require("config.nvim-dap-ui") end,
+    keys = require("keys.nvim-dap-ui"),
+  },
+  {
+    "mfussenegger/nvim-dap",
+    lazy = false,
+    keys = require("keys.nvim-dap"),
+  },
+  {
     "numToStr/FTerm.nvim",
     lazy = true,
     config = function() require("config.fterm") end,

@@ -12,3 +12,5 @@ o.termguicolors = true
 o.number = true
 
 vim.g.lazygit_floating_window_use_plenary = 1
+
+vim.diagnostic.config({virtual_text = true})
