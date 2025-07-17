@@ -14,3 +14,13 @@ o.number = true
 vim.g.lazygit_floating_window_use_plenary = 1
 
 vim.diagnostic.config({virtual_text = true})
+
+vim.lsp.config('pyright', {
+  settings = {
+    ['python'] = {
+        analysis = {
+          diagnosticMode = "workspace",
+        }
+    },
+  },
+})
